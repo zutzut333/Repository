@@ -30,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/Cllion programme/ICT-403 prog/untitled" />
   </component>
   <component name="RunManager">
     <configuration name="Code__BN" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Code__BN" TARGET_NAME="Code__BN" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Code__BN" RUN_TARGET_NAME="Code__BN">
@@ -62,6 +63,11 @@
       <updated>1583499424876</updated>
       <workItem from="1583499426720" duration="3675000" />
       <workItem from="1583769945215" duration="2026000" />
+      <workItem from="1584103096130" duration="4875000" />
+      <workItem from="1584113440214" duration="1110000" />
+      <workItem from="1584471333635" duration="12754000" />
+      <workItem from="1584559845927" duration="7747000" />
+      <workItem from="1584567695219" duration="1139000" />
     </task>
     <servers />
   </component>
@@ -69,21 +75,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1583771972964">
+    <state x="491" y="147" key="#Code__BN" timestamp="1584106154593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583771972964" />
-    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1583771972963">
+    <state x="491" y="147" key="#Code__BN/0.0.1536.824@0.0.1536.824" timestamp="1584106154593" />
+    <state x="331" y="170" key="FileChooserDialogImpl" timestamp="1584484300693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583771972963" />
-    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1583771972963">
+    <state x="331" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584484300693" />
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1584567598739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583771972963" />
-    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1583771972963">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584567598739" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1584567598739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583771972963" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584567598739" />
+    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1584567598739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584567598739" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1584567598739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584567598739" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1584113633396">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1584113633396" />
   </component>
 </project>
