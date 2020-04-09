@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Code__BN.dir/main.c.obj"
+  "CMakeFiles/Code__BN.dir/tableau.c.obj"
   "Code__BN.exe"
   "Code__BN.exe.manifest"
   "Code__BN.pdb"

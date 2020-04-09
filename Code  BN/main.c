@@ -1,14 +1,18 @@
 /*Name Battaile Navale
- * Version 0.1
- * Date 17.03.2020
+ * Version 1
+ * Date 09.04.2020
  * Autor Jean
  */
 #include <stdio.h>
+#include "tableau.c"
+#include <time.h>
+#include <stdlib.h>
 
-const char X = 'X'; // case vierge
-const char T = 'T'; // case bateau touché
-const char R = 'R'; // case raté
- int TV[10][10] = //tableau Vierge
+
+
+
+// tableau de base avent jeu
+int TableauVierge[10][10] =
         {{X, X, X, X, X, X, X, X, X, X},
          {X, X, X, X, X, X, X, X, X, X},
          {X, X, X, X, X, X, X, X, X, X},
@@ -21,63 +25,90 @@ const char R = 'R'; // case raté
          {X, X, X, X, X, X, X, X, X, X},
         };
 
- int TR[10][10] = //tableau réel
-        {{R, R, T, R, R, R, R, R, T, R},
-         {R, R, T, R, R, R, R, R, T, R},
-         {R, R, R, R, R, R, R, R, T, R},
-         {R, R, R, R, R, R, R, R, R, R},
-         {R, R, R, T, T, T, R, R, R, R},
-         {R, T, R, R, R, R, R, R, R, R},
-         {R, T, R, R, R, R, R, R, R, R},
-         {R, T, R, R, R, R, R, R, R, R},
-         {R, T, R, R, R, R, R, R, R, R},
-         {R, R, R, R, T, T, T, T, T, R},
-        };
 
-void quitter() {
 
-}
-// affiche plateau de jeu
+// affichage plateau de jeu
 int jouer() {
     int ligne,colonne;
-printf("                        Jeu                    \n\n");
-printf("                   Votre plateau  \n");
+    int touche = 0;
+    int compteur = 0;
+    printf("                        Jeu                    \n\n");
+    printf("                   Votre plateau  \n");
 
-for ( char compteur = 0 ; compteur < 30 ; compteur++){//systeme de tours qui sera remplacé par un adversaire
+    for ( char compteur = 0 ; compteur < 30 ; compteur++){
+do{
 
-printf("    1    2    3    4    5    6    7    8    9    10");
-printf("\n1  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[1][1], TV[1][2], TV[1][3], TV[1][4], TV[1][5], TV[1][6], TV[1][7], TV[1][8], TV[1][9], TV[1][10]);
-printf("\n2  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[2][1], TV[2][2], TV[2][3], TV[2][4], TV[2][5], TV[2][6], TV[2][7], TV[2][8], TV[2][9], TV[2][10]);
-printf("\n3  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[3][1], TV[3][2], TV[3][3], TV[3][4], TV[3][5], TV[3][6], TV[3][7], TV[3][8], TV[3][9], TV[3][10]);
-printf("\n4  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[4][1], TV[4][2], TV[4][3], TV[4][4], TV[4][5], TV[4][6], TV[4][7], TV[4][8], TV[4][9], TV[4][10]);
-printf("\n5  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[5][1], TV[5][2], TV[5][3], TV[5][4], TV[5][5], TV[5][6], TV[5][7], TV[5][8], TV[5][9], TV[5][10]);
-printf("\n6  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[6][1], TV[6][2], TV[6][3], TV[6][4], TV[6][5], TV[6][6], TV[6][7], TV[6][8], TV[6][9], TV[6][10]);
-printf("\n7  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[7][1], TV[7][2], TV[7][3], TV[7][4], TV[7][5], TV[7][6], TV[7][7], TV[7][8], TV[7][9], TV[7][10]);
-printf("\n8  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[8][1], TV[8][2], TV[8][3], TV[8][4], TV[8][5], TV[8][6], TV[8][7], TV[8][8], TV[8][9], TV[8][10]);
-printf("\n9  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[9][1], TV[9][2], TV[9][3], TV[9][4], TV[9][5], TV[9][6], TV[9][7], TV[9][8], TV[9][9], TV[9][10]);
-printf("\n10 {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TV[10][1], TV[10][2], TV[10][3], TV[10][4], TV[10][5], TV[10][6], TV[10][7], TV[10][8], TV[10][9], TV[10][10]);//Probleme d'affichage valeur fausse
+        printf("%d/30 tours\n",compteur);
+        printf("    1    2    3    4    5    6    7    8    9    10 ");
+        printf("\n1  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[0][0], TableauVierge[0][1], TableauVierge[0][2], TableauVierge[0][3], TableauVierge[0][4], TableauVierge[0][5], TableauVierge[0][6], TableauVierge[0][7], TableauVierge[0][8], TableauVierge[0][9]);
+        printf("\n2  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[1][0], TableauVierge[1][1], TableauVierge[1][2], TableauVierge[1][3], TableauVierge[1][4], TableauVierge[1][5], TableauVierge[1][6], TableauVierge[1][7], TableauVierge[1][8], TableauVierge[1][9]);
+        printf("\n3  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[2][0], TableauVierge[2][1], TableauVierge[2][2], TableauVierge[2][3], TableauVierge[2][4], TableauVierge[2][5], TableauVierge[2][6], TableauVierge[2][7], TableauVierge[2][8], TableauVierge[2][9]);
+        printf("\n4  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[3][0], TableauVierge[3][1], TableauVierge[3][2], TableauVierge[3][3], TableauVierge[3][4], TableauVierge[3][5], TableauVierge[3][6], TableauVierge[3][7], TableauVierge[3][8], TableauVierge[3][9]);
+        printf("\n5  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[4][0], TableauVierge[4][1], TableauVierge[4][2], TableauVierge[4][3], TableauVierge[4][4], TableauVierge[4][5], TableauVierge[4][6], TableauVierge[4][7], TableauVierge[4][8], TableauVierge[4][9]);
+        printf("\n6  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[5][0], TableauVierge[5][1], TableauVierge[5][2], TableauVierge[5][3], TableauVierge[5][4], TableauVierge[5][5], TableauVierge[5][6], TableauVierge[5][7], TableauVierge[5][8], TableauVierge[5][9]);
+        printf("\n7  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[6][0], TableauVierge[6][1], TableauVierge[6][2], TableauVierge[6][3], TableauVierge[6][4], TableauVierge[6][5], TableauVierge[6][6], TableauVierge[6][7], TableauVierge[6][8], TableauVierge[6][9]);
+        printf("\n8  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[7][0], TableauVierge[7][1], TableauVierge[7][2], TableauVierge[7][3], TableauVierge[7][4], TableauVierge[7][5], TableauVierge[7][6], TableauVierge[7][7], TableauVierge[7][8], TableauVierge[7][9]);
+        printf("\n9  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[8][0], TableauVierge[8][1], TableauVierge[8][2], TableauVierge[8][3], TableauVierge[8][4], TableauVierge[8][5], TableauVierge[8][6], TableauVierge[8][7], TableauVierge[8][8], TableauVierge[8][9]);
+        printf("\n10 {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}  {%c}",TableauVierge[9][0], TableauVierge[9][1], TableauVierge[9][2], TableauVierge[9][3], TableauVierge[9][4], TableauVierge[9][5], TableauVierge[9][6], TableauVierge[9][7], TableauVierge[9][8], TableauVierge[9][9]);
 
-printf("\n\ncible :\n");
-printf("colonne");
-scanf("%d",&colonne);
-printf("ligne");
-scanf("%d",&ligne);
 
-TV[ligne][colonne] = TR[ligne][colonne];
+        printf("\n\ncible :\n");
+        printf("colonne");
+        scanf("%d",&colonne);
+        printf("ligne");
+        scanf("%d",&ligne);
+
+        TableauVierge[ligne-1][colonne-1] = TableauReel[ligne-1][colonne-1];
+        if (TableauVierge[ligne-1][colonne-1] == T) touche++;
+        compteur++;
+
+        if (touche == 17) victoire(compteur) ;
+        else if (compteur == 30) defaite(compteur);
+
+    }while (compteur <30 || touche == 17);
 }
 }
 
-int pseudo() {
+//Demande le nom et l'ajoute au tableau des scores a cote de son score
+int pseudo(score) {
+    char nom;
+printf("\n\nQuel est votre nom ?");
+scanf("%d",&nom);
+
+    FILE *ficher = fopen("save","r");
+
+
+    if(ficher == NULL)
+        exit(1);
+
+
+        fprintf("%d %d",nom,score);
+
+
+    fclose(ficher);
 
 }
-
+//Permet de lire le fichier save
 int scores() {
+    FILE *ficher = fopen("save","r");
+    int texte = 0;
 
+    if(ficher == NULL)
+        exit(1);
+
+    while((texte = fgetc(ficher)) != EOF )
+    {
+        printf("%c",texte);
+    }
+
+    fclose(ficher);
+
+ 
 }
-// affiche le menu
+// affiche l' aide
 void aide() {
     int fin;
-    printf("                               Bataille Navale\n\n\n");
+    printf("                             Bataille Navale\n\n\n");
 
 
     printf("                            Chaque Joueur possede :\n\n ");
@@ -106,45 +137,58 @@ void aide() {
 }
 
 //revoie a l'une des fonction en fonction du choix
-  void Choix(choix) {
+void Choix(int choix) {
     switch (choix) {
         case 1 :
             jouer();
             break;
         case 2 :
-            pseudo();
-            break;
-        case 3 :
             scores();
             break;
-        case 4 :
+        case 3 :
             aide();
             break;
-        case 5 :
+        case 4 :
             quitter();
             break;
     }
 }
 //affichage et choix menu
-int Menu(valeurMenu) {
+int Menu( ) {
+    int valeurMenu;
     printf("BATAILLE NAVALE\n");
     printf("1-Jouer\n");
-    printf("2-Pseudo\n");
-    printf("3-Scores\n");
-    printf("4-Aide\n");
-    printf("5-Quitter\n");
+    printf("2-Scores\n");
+    printf("3-Aide\n");
+    printf("4-Quitter\n");
     do {
         fflush(stdin);
         scanf("%d", &valeurMenu);
-        if (valeurMenu < 1 || valeurMenu > 5) {
+        if (valeurMenu < 1 || valeurMenu > 4) {
             printf("choix pas dans la liste\n");
 
         }
-    } while ((valeurMenu < 1) || (valeurMenu > 5));
+    } while ((valeurMenu < 1) || (valeurMenu > 4));
     Choix(valeurMenu);
 }
+//pour quitter
+void quitter() {
 
+}
+//message de victoire
+int victoire(int score) {
+    printf("\nBRAVO VOUS AVEZ GAGNER AVEC UN SCORE DE %d !!!!",score);
+    pseudo(score);
+}
+//message de defaite
+int defaite(int score){
+    printf("\n TOUTE NOTRE FLOTTE A ETE DETRUITE PAR VOTRE FAUTE !!!!!!");
+    pseudo(score);
+}
+//main
 int main() {
+
+    ChoixTablau();
 
     Menu();
 

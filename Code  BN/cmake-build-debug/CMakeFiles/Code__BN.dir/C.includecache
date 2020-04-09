@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/user/Desktop/dossier CPNV/ICT/ICT-431/Code  BN/main.c
+G:/code local/ma-20/Code  BN/main.c
 stdio.h
+-
+tableau.c
+G:/code local/ma-20/Code  BN/tableau.c
+time.h
+-
+stdlib.h
+-
+
+G:/code local/ma-20/Code  BN/tableau.c
+time.h
+-
+stdlib.h
 -
 

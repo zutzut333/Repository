@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN"
+CMAKE_SOURCE_DIR = "G:\code local\ma-20\Code  BN"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug"
+CMAKE_BINARY_DIR = "G:\code local\ma-20\Code  BN\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Code__BN.dir/depend.make
@@ -58,30 +58,45 @@ include CMakeFiles/Code__BN.dir/flags.make
 
 CMakeFiles/Code__BN.dir/main.c.obj: CMakeFiles/Code__BN.dir/flags.make
 CMakeFiles/Code__BN.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Code__BN.dir/main.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-W\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Code__BN.dir\main.c.obj   -c "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Code__BN.dir/main.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Code__BN.dir\main.c.obj   -c "G:\code local\ma-20\Code  BN\main.c"
 
 CMakeFiles/Code__BN.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Code__BN.dir/main.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-W\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\main.c" > CMakeFiles\Code__BN.dir\main.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "G:\code local\ma-20\Code  BN\main.c" > CMakeFiles\Code__BN.dir\main.c.i
 
 CMakeFiles/Code__BN.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Code__BN.dir/main.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-W\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\main.c" -o CMakeFiles\Code__BN.dir\main.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "G:\code local\ma-20\Code  BN\main.c" -o CMakeFiles\Code__BN.dir\main.c.s
+
+CMakeFiles/Code__BN.dir/tableau.c.obj: CMakeFiles/Code__BN.dir/flags.make
+CMakeFiles/Code__BN.dir/tableau.c.obj: ../tableau.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Code__BN.dir/tableau.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Code__BN.dir\tableau.c.obj   -c "G:\code local\ma-20\Code  BN\tableau.c"
+
+CMakeFiles/Code__BN.dir/tableau.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Code__BN.dir/tableau.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "G:\code local\ma-20\Code  BN\tableau.c" > CMakeFiles\Code__BN.dir\tableau.c.i
+
+CMakeFiles/Code__BN.dir/tableau.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Code__BN.dir/tableau.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "G:\code local\ma-20\Code  BN\tableau.c" -o CMakeFiles\Code__BN.dir\tableau.c.s
 
 # Object files for target Code__BN
 Code__BN_OBJECTS = \
-"CMakeFiles/Code__BN.dir/main.c.obj"
+"CMakeFiles/Code__BN.dir/main.c.obj" \
+"CMakeFiles/Code__BN.dir/tableau.c.obj"
 
 # External object files for target Code__BN
 Code__BN_EXTERNAL_OBJECTS =
 
 Code__BN.exe: CMakeFiles/Code__BN.dir/main.c.obj
+Code__BN.exe: CMakeFiles/Code__BN.dir/tableau.c.obj
 Code__BN.exe: CMakeFiles/Code__BN.dir/build.make
 Code__BN.exe: CMakeFiles/Code__BN.dir/linklibs.rsp
 Code__BN.exe: CMakeFiles/Code__BN.dir/objects1.rsp
 Code__BN.exe: CMakeFiles/Code__BN.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Code__BN.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Code__BN.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Code__BN.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -94,6 +109,6 @@ CMakeFiles/Code__BN.dir/clean:
 .PHONY : CMakeFiles/Code__BN.dir/clean
 
 CMakeFiles/Code__BN.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN" "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN" "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug" "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug" "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug\CMakeFiles\Code__BN.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "G:\code local\ma-20\Code  BN" "G:\code local\ma-20\Code  BN" "G:\code local\ma-20\Code  BN\cmake-build-debug" "G:\code local\ma-20\Code  BN\cmake-build-debug" "G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles\Code__BN.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Code__BN.dir/depend
 

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.3\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN"
+CMAKE_SOURCE_DIR = "G:\code local\ma-20\Code  BN"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug"
+CMAKE_BINARY_DIR = "G:\code local\ma-20\Code  BN\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -73,14 +73,14 @@ preinstall:
 CMakeFiles/Code__BN.dir/all:
 	$(MAKE) -f CMakeFiles\Code__BN.dir\build.make CMakeFiles/Code__BN.dir/depend
 	$(MAKE) -f CMakeFiles\Code__BN.dir\build.make CMakeFiles/Code__BN.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target Code__BN"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles" --progress-num=1,2,3 "Built target Code__BN"
 .PHONY : CMakeFiles/Code__BN.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Code__BN.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles" 3
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Code__BN.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\user\Desktop\dossier CPNV\ICT\ICT-431\Code  BN\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "G:\code local\ma-20\Code  BN\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Code__BN.dir/rule
 
 # Convenience name for target.
