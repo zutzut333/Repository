@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-G:/code local/ma-20/Code  BN/main.c
+G:/github Repository/Repository/Code  BN/main.c
 stdio.h
 -
 tableau.c
-G:/code local/ma-20/Code  BN/tableau.c
+G:/github Repository/Repository/Code  BN/tableau.c
 time.h
 -
 stdlib.h
 -
 
-G:/code local/ma-20/Code  BN/tableau.c
+G:/github Repository/Repository/Code  BN/tableau.c
 time.h
 -
 stdlib.h
+-
+stdio.h
 -
 

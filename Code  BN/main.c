@@ -31,7 +31,6 @@ int TableauVierge[10][10] =
 int jouer() {
     int ligne,colonne;
     int touche = 0;
-    int compteur = 0;
     printf("                        Jeu                    \n\n");
     printf("                   Votre plateau  \n");
 
@@ -70,26 +69,36 @@ do{
 }
 
 //Demande le nom et l'ajoute au tableau des scores a cote de son score
-int pseudo(score) {
+int pseudo(int score) {
     char nom;
+    int fin = 0;
 printf("\n\nQuel est votre nom ?");
-scanf("%d",&nom);
 
-    FILE *ficher = fopen("save","r");
+
+    FILE *ficher = fopen("save","r+");
 
 
     if(ficher == NULL)
         exit(1);
 
-
-        fprintf("%d %d",nom,score);
+          fscanf("%s",&nom);
+        fprintf("%d",score);
 
 
     fclose(ficher);
 
+    printf("\n1-Menu");
+
+    do {
+        scanf("%d", &fin);
+    }while (fin != 1);
+    Menu();
+
 }
 //Permet de lire le fichier save
 int scores() {
+    int fin;
+
     FILE *ficher = fopen("save","r");
     int texte = 0;
 
@@ -98,17 +107,22 @@ int scores() {
 
     while((texte = fgetc(ficher)) != EOF )
     {
-        printf("%c",texte);
-    }
+    printf("%c",texte);
+}
 
-    fclose(ficher);
+fclose(ficher);
 
- 
+    printf("\n\n1-Menu");
+
+    do {
+        scanf("%d", &fin);
+    }while (fin != 1);
+    Menu();
 }
 // affiche l' aide
 void aide() {
     int fin;
-    printf("                             Bataille Navale\n\n\n");
+    printf("                             \nBataille Navale\n\n\n");
 
 
     printf("                            Chaque Joueur possede :\n\n ");
@@ -126,14 +140,14 @@ void aide() {
 
     printf("      Une partie se termine quand un joueur coule tout les bateaux adverses\n\n");
 
-    printf("     X sont les case pas révelé, R est pour les case vide et T signifie touché\n");
+    printf("     X sont les case pas revele, R est pour les case vide et T signifie touche\n");
 
-    printf("                                    1-Quitter");
+    printf("                                    1-Menu");
 
     do {
         scanf("%d", &fin);
     }while (fin != 1);
-    quitter();
+    Menu();
 }
 
 //revoie a l'une des fonction en fonction du choix
